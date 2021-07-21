@@ -1,0 +1,48 @@
+<T3DataStructure>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>Blog Config</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.category.name>
+                        <TCEforms>
+                            <label>Name der Kategorie</label>
+                            <config>
+                                <type>input</type>
+                                <size>30</size>
+                                <eval>string</eval>
+                                <default>Isolierschlauch</default>
+                            </config>
+                        </TCEforms>
+                    </settings.category.name>
+                    <settings.category.part>
+                        <TCEforms>
+                            <label>Abschnitt der Kategorie</label>
+                            <config>
+                                <type>input</type>
+                                <size>2</size>
+                                <eval>int</eval>
+                                <default>0</default>
+                            </config>
+                        </TCEforms>
+                    </settings.category.part>
+                    <settings.category.mobilecols>
+                        <TCEforms>
+                            <label>Anzahl Spalten im mobile View</label>
+                            <config>
+                                <type>input</type>
+                                <size>2</size>
+                                <eval>int</eval>
+                                <default>2</default>
+                            </config>
+                        </TCEforms>
+                    </settings.category.mobilecols>
+
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>

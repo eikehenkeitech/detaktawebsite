@@ -1,0 +1,72 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+<h1>Listing for Article</h1>
+
+<f:flashMessages />
+
+<table  class="tx_detaktawebsite" >
+	<tr>
+		<th><f:translate key="tx_detaktawebsite_domain_model_article.name" /></th>
+		<th><f:translate key="tx_detaktawebsite_domain_model_article.description" /></th>
+		<th><f:translate key="tx_detaktawebsite_domain_model_article.part" /></th>
+		<th><f:translate key="tx_detaktawebsite_domain_model_article.position" /></th>
+		<th><f:translate key="tx_detaktawebsite_domain_model_article.approval" /></th>
+		<th><f:translate key="tx_detaktawebsite_domain_model_article.annex" /></th>
+		<th><f:translate key="tx_detaktawebsite_domain_model_article.temperature" /></th>
+		<th><f:translate key="tx_detaktawebsite_domain_model_article.diacstrength" /></th>
+		<th><f:translate key="tx_detaktawebsite_domain_model_article.dimension" /></th>
+		<th><f:translate key="tx_detaktawebsite_domain_model_article.standards" /></th>
+		<th><f:translate key="tx_detaktawebsite_domain_model_article.remark" /></th>
+		<th><f:translate key="tx_detaktawebsite_domain_model_article.datasheet" /></th>
+		<th><f:translate key="tx_detaktawebsite_domain_model_article.image" /></th>
+		<th><f:translate key="tx_detaktawebsite_domain_model_article.separatline" /></th>
+		<th><f:translate key="tx_detaktawebsite_domain_model_article.desconly" /></th>
+		<th><f:translate key="tx_detaktawebsite_domain_model_article.ignorename" /></th>
+		<th><f:translate key="tx_detaktawebsite_domain_model_article.specialtype" /></th>
+		<th><f:translate key="tx_detaktawebsite_domain_model_article.addclass" /></th>
+		<th> </th>
+		<th> </th>
+	</tr>
+
+	<f:for each="{articles}" as="article">
+		<tr>
+			<td><f:link.action action="show" arguments="{article : article}"> {article.name}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{article : article}"> {article.description}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{article : article}"> {article.part}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{article : article}"> {article.position}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{article : article}"> {article.approval}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{article : article}"> {article.annex}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{article : article}"> {article.temperature}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{article : article}"> {article.diacstrength}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{article : article}"> {article.dimension}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{article : article}"> {article.standards}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{article : article}"> {article.remark}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{article : article}"> {article.datasheet}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{article : article}"> {article.image}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{article : article}"> {article.separatline}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{article : article}"> {article.desconly}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{article : article}"> {article.ignorename}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{article : article}"> {article.specialtype}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{article : article}"> {article.addclass}</f:link.action></td>
+			<td><f:link.action action="edit" arguments="{article : article}">Edit</f:link.action></td>
+			<td><f:link.action action="delete" arguments="{article : article}">Delete</f:link.action></td>
+		</tr>
+	</f:for>
+</table>
+
+<f:link.action action="new">New Article</f:link.action>
+</f:section>
+</html>

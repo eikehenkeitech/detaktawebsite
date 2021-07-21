@@ -1,0 +1,101 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+This Template is responsible for displaying a single view for a domain object
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+Resources:
+Private:
+Templates:
+Show.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+  <div class="padding-top-10"></div>
+  <span class="wlf-headline">{category.headline}</span>
+  <div>
+    {category.description}
+  </div>
+  <div class="images-with-rounded-corners padding-top-10">
+    <img src="{category.image}">
+  </div>
+  <f:if condition="{category.articles}">
+    <f:if condition="{category.hasdatasheet}">
+      <f:then>
+        <f:if condition="{category.nameforplugin}=='wlf_1'">
+          <f:then>
+        <div class="pull-right padding-12-important">
+          <a href="/helper/collectPDF.php?cat[0]={category.nameforplugin}&cat[1]=wlf_2&cat[2]=wlf_3&cat[3]=wlf_4" target="_blank" class="detakta-link"><f:translate id="category.alledatenblaetter" /> <img src="fileadmin/datenblaetter/PDF_download_h35.png" title="PDF download" style="" alt="" width="30" height="30"></a>
+        </div>
+          </f:then>
+        </f:if>
+      </f:then>
+    </f:if>
+
+    <div class=" padding-top-20">
+      <table class="table table-striped-detakmblue table-hover-detakmblue table-condensed table-no-border table-small-font">
+        <thead align="justify">
+        <tr class="rowheader">
+          <td><f:translate id="category.detaktatype" /></td>
+          <td><f:translate id="category.farbe" /></td>
+          <td><f:translate id="category.wlw" /></td>
+          <f:if condition="{category.hasdatasheet}">
+            <f:then>
+              <td><f:translate id="category.datenblatt" /></td>
+            </f:then>
+          </f:if>
+
+        </tr>
+        </thead>
+        <tbody>
+        <f:for each="{category.articles}" as="article">
+          <f:if condition="{article.part}=='1'">
+
+            <f:then>
+              <v:variable.set name="hassonderarticle" value="1" />
+
+            </f:then>
+            <f:else>
+              <f:if condition="{article.desconly}=='1'">
+                <f:then>
+
+                  <f:if condition="{category.hasdatasheet}">
+                    <f:then>
+                      <td colspan="9" class="description-only">{article.remark}</td>
+                    </f:then>
+                    <f:else>
+                      <td colspan="8" class="description-only">{article.remark}</td>
+                    </f:else>
+                  </f:if>
+
+                </f:then>
+                <f:else>
+                  <tr>
+                    <td class="detakta-article-name{article.separatline}">{article.name}</td>
+                    <td>{article.annex}</td>
+                    <td>{article.diacstrength}</td>
+                    <f:if condition="{category.hasdatasheet}">
+                      <f:then>
+                        <td class="align-center"><a target="_blank"  href="{article.datasheet}" title="Leitet Herunterladen der Datei ein"><img src="fileadmin/datenblaetter/PDF_download_h35.png" title="PDF download" style="" alt="" width="30" height="30"></a></td>
+                      </f:then>
+                    </f:if>
+
+                  </tr>
+                </f:else>
+
+              </f:if>
+
+            </f:else>
+          </f:if>
+        </f:for>
+        </tbody>
+      </table>
+
+
+    </div>
+
+  </f:if>
+</f:section>
+</html>

@@ -1,0 +1,175 @@
+####
+# Example of what CKEditor can all bring
+###
+
+# Load default processing options
+imports:
+    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Processing.yaml" }
+    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Base.yaml" }
+    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
+#    - { resource: "EXT:rte_ckeditor_fontawesome/Configuration/RTE/PluginFA5.yaml" }
+
+# Add configuration for the editor
+# For complete documentation see http://docs.ckeditor.com/#!/api/CKEDITOR.config
+editor:
+  config:
+    contentsCss: ["/fileadmin/detaktalayout/MainTemplates/Resources/Public/CSS/bootstrap.css","/fileadmin/detaktalayout/MainTemplates/Resources/Public/CSS/font-awesome.css"]
+
+    filebrowserBrowseUrl: "/ckfinder/ckfinder.html"
+    filebrowserUploadUrl: "/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files"
+    # can be "default", but a custom stylesSet can be defined here, which fits TYPO3 best
+    externalPlugins:
+      - image2: 
+        resource: "fileadmin/detaktalayout/ckeditor/plugins/image2/plugin.js"
+      - widget: 
+        resource: "fileadmin/detaktalayout/ckeditor/plugins/widget/plugin.js"
+      - dialog: 
+        resource: "fileadmin/detaktalayout/ckeditor/plugins/dialog/plugin.js"
+      - filebrowser: 
+        resource: "fileadmin/detaktalayout/ckeditor/plugins/filebrowser/plugin.js"
+    uiColor: "#a7a8f8"
+    stylesSet:
+      # block level styles
+      - { name: "Orange title H2 Detakta", element: "h2", styles: { color: "orange", background: "blue" } }
+      - { name: "Orange title H3", element: "h3", styles: { color: "orange", background: "blue" } }
+      - { name: "Detakta Color H3", element: "h3", styles: { color: "#f50c11" } }
+      - { name: "Detakta Color H2", element: "h2", styles: { color: "#f50c11" } }
+      - { name: "Quote / Citation", element: "blockquote" }
+      - { name: "Code block", element: "code" }
+      # Inline styles
+      - { name: "Yellow marker", element: "span", styles: { background-color: "yellow" } }
+      - { name: "Detakta red", element: "span", styles: { color: "#f50c11" } }
+      - { name: "Detakta css red", element: "span", attributes: { 'class': "detaktared-text" } }
+
+    format_tags: "p;h1;h2;h3;h4;h5;pre"
+
+    toolbarGroups:
+      - { name: clipboard, groups: [clipboard, undo] }
+      - { name: editing,   groups: [find, selection, spellchecker] }
+      - { name: links }
+      - { name: insert }
+      - { name: tools }
+      - { name: table }
+      - { name: tabletools }
+      - { name: document,  groups: [ mode, document, doctools ] }
+      - { name: others }
+      - "/"
+      - { name: basicstyles, groups: [ basicstyles, align, cleanup ] }
+      - { name: paragraph,   groups: [ list, indent, blocks, align, bidi ] }
+      - { name: specialcharacters,   groups: [ insertcharacters ] }
+      - "/"
+      - { name: styles }
+
+    justifyClasses:
+      - text-left
+      - text-center
+      - text-right
+      - text-justify
+
+    extraPlugins:
+      - justify
+      - font
+      - find
+      - bidi
+      - selectall
+      - autolink
+      - wordcount
+      - image2
+      - widget
+      - dialog
+      - filebrowser
+
+    removePlugins: 
+      - image 
+
+    extraAllowedContent:
+     - figure
+     - figcaption
+     - img(*)
+     - p(*)
+     - span(*)
+     - tr(*)
+     - tbody(*)
+     - thead(*)
+     - td(*)
+     - th(*)
+     - td(*);span(*)
+     - table(*)
+     - i(*)
+     - a(*)
+     - script(*)
+     - div(*)
+    removeButtons:
+
+
+
+
+# Allow s and u tag
+processing:
+  allowTags:
+    - a
+    - abbr
+    - acronym
+    - address
+    - article
+    - big
+    - blockquote
+    - br
+    - caption
+    - cite
+    - code
+    - col
+    - colgroup
+    - dd
+    - del
+    - dfn
+    - dl
+    - div
+    - dt
+    - em
+    - footer
+    - header
+    - h1
+    - h2
+    - h3
+    - h4
+    - h5
+    - h6
+    - hr
+    - i
+    - img
+    - ins
+    - kbd
+    - label
+    - li
+    - nav
+    - ol
+    - p
+    - pre
+    - q
+    - samp
+    - script
+    - section
+    - small
+    - span
+    - strong
+    - style
+    - sub
+    - sup
+    - table
+    - thead
+    - tbody
+    - tfoot
+    - td
+    - th
+    - tr
+    - tt
+    - ul
+    - var
+  HTMLparser_db:
+    tags:
+      span:
+        allowedAttribs: class
+        fixAttrib:
+          style:
+            unset: "true"

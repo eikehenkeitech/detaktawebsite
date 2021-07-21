@@ -1,0 +1,44 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+This Template is responsible for displaying a single view for a domain object
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        Show.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+<h1>Single View for {category.name}</h1>
+  <br>
+  <h3>{category.headline}</h3>
+  <br>
+  {category.description}
+
+  <f:if condition="{category.articles}">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <td>Name</td>
+          <td>Beschreibung</td>
+          <td>Temperatur</td>
+        </tr>
+      </thead>
+      <tbody>
+      <f:for each="{category.articles}" as="article">
+        <tr>
+          <td>{article.name}</td>
+          <td>{article.description}</td>
+          <td>{article.temperature}</td>
+        </tr>
+      </f:for>
+      </tbody>
+    </table>
+
+  </f:if>
+</f:section>
+</html>

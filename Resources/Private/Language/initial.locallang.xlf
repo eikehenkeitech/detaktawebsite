@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-10-30T12:07:46Z" product-name="detaktawebsite">
+		<header/>
+		<body>
+			<trans-unit id="tx_detaktawebsite_domain_model_articletables">
+				<source>Detakta Website - Artikel Tabellen</source>
+			</trans-unit>
+			<trans-unit id="tx_detaktawebsite_domain_model_articletables.description">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="tx_detaktawebsite_domain_model_category">
+				<source>Category</source>
+			</trans-unit>
+			<trans-unit id="tx_detaktawebsite_domain_model_category.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_detaktawebsite_domain_model_category.headline">
+				<source>Headline</source>
+			</trans-unit>
+			<trans-unit id="tx_detaktawebsite_domain_model_category.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_detaktawebsite_domain_model_category.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="tx_detaktawebsite_domain_model_category.viewname">
+				<source>Viewname</source>
+			</trans-unit>
+			<trans-unit id="tx_detaktawebsite_domain_model_category.dirshortcut">
+				<source>Dirshortcut</source>
+			</trans-unit>
+			<trans-unit id="tx_detaktawebsite_domain_model_category.hasdatasheet">
+				<source>Hasdatasheet</source>
+			</trans-unit>
+			<trans-unit id="tx_detaktawebsite_domain_model_category.nameforplugin">
+				<source>Nameforplugin</source>
+			</trans-unit>
+			<trans-unit id="tx_detaktawebsite_domain_model_category.articles">
+				<source>Articles</source>
+			</trans-unit>
+			<trans-unit id="tx_detaktawebsite_domain_model_article">
+				<source>Article</source>
+			</trans-unit>
+			<trans-unit id="tx_detaktawebsite_domain_model_article.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_detaktawebsite_domain_model_article.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_detaktawebsite_domain_model_article.temperature">
+				<source>Temperature</source>
+			</trans-unit>
+			<trans-unit id="tx_detaktawebsite_domain_model_article.part">
+				<source>Part</source>
+			</trans-unit>
+			<trans-unit id="tx_detaktawebsite_domain_model_article.position">
+				<source>Position</source>
+			</trans-unit>
+			<trans-unit id="tx_detaktawebsite_domain_model_article.approval">
+				<source>Approval</source>
+			</trans-unit>
+			<trans-unit id="tx_detaktawebsite_domain_model_article.annex">
+				<source>Annex</source>
+			</trans-unit>
+			<trans-unit id="tx_detaktawebsite_domain_model_article.diacstrength">
+				<source>Diacstrength</source>
+			</trans-unit>
+			<trans-unit id="tx_detaktawebsite_domain_model_article.dimension">
+				<source>Dimension</source>
+			</trans-unit>
+			<trans-unit id="tx_detaktawebsite_domain_model_article.standards">
+				<source>Standards</source>
+			</trans-unit>
+			<trans-unit id="tx_detaktawebsite_domain_model_article.remark">
+				<source>Remark</source>
+			</trans-unit>
+			<trans-unit id="tx_detaktawebsite_domain_model_article.datasheet">
+				<source>Datasheet</source>
+			</trans-unit>
+			<trans-unit id="tx_detaktawebsite_domain_model_article.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="category.produkt">
+				<source>Produkt5</source>
+			</trans-unit>
+			<trans-unit id="category.zulassung">
+				<source>Zulassung</source>
+			</trans-unit>
+			<trans-unit id="category.zusatz">
+				<source>Zusatz</source>
+			</trans-unit>
+			<trans-unit id="category.temperatur">
+				<source>Temperatur</source>
+			</trans-unit>
+			<trans-unit id="category.durchschlagsfestigkeit">
+				<source>Durchschlagsfestigkeit</source>
+			</trans-unit>
+			<trans-unit id="category.abmessungen">
+				<source>Abmessungen</source>
+			</trans-unit>
+			<trans-unit id="category.standards">
+				<source>Standards</source>
+			</trans-unit>
+			<trans-unit id="category.anmerkung">
+				<source>Anmerkung</source>
+			</trans-unit>
+			<trans-unit id="category.datenblatt">
+				<source>Datenblatt</source>
+			</trans-unit>
+			<trans-unit id="category.sonderprodukte">
+				<source>Sonderprodukte</source>
+			</trans-unit>
+			<trans-unit id="category.short.produkt">
+				<source>Produkt6</source>
+			</trans-unit>
+			<trans-unit id="category.short.zulassung">
+				<source>Zulassung</source>
+			</trans-unit>
+			<trans-unit id="category.short.zusatz">
+				<source>Zusatz</source>
+			</trans-unit>
+			<trans-unit id="category.short.temperatur">
+				<source>Temperatur</source>
+			</trans-unit>
+			<trans-unit id="category.short.durchschlagsfestigkeit">
+				<source>Durchschlagsfestigkeit</source>
+			</trans-unit>
+			<trans-unit id="category.short.abmessungen">
+				<source>Abmessungen</source>
+			</trans-unit>
+			<trans-unit id="category.short.standards">
+				<source>Standards</source>
+			</trans-unit>
+			<trans-unit id="category.short.anmerkung">
+				<source>Anmerkung</source>
+			</trans-unit>
+			<trans-unit id="category.short.datenblatt">
+				<source>Datenblatt</source>
+			</trans-unit>
+			<trans-unit id="category.short.sonderprodukte">
+				<source>Sonderprodukte</source>
+			</trans-unit>
+			<trans-unit id="category.short.aufbau">
+				<source>Aufbau</source>
+			</trans-unit>
+			<trans-unit id="category.aufbau">
+				<source>Aufbau</source>
+			</trans-unit>
+			<trans-unit id="category.short.farbe">
+				<source>Farbe</source>
+				<target state="translated">Farbe</target>
+			</trans-unit>
+			<trans-unit id="category.farbe">
+				<source>Farbe</source>
+				<target state="translated">Farbe</target>
+			</trans-unit>
+			<trans-unit id="category.short.wlw">
+				<source>Wärmeleitwert W/mK</source>
+				<target state="translated">Wärmeleitwert W/mK</target>
+			</trans-unit>
+			<trans-unit id="category.wlw">
+				<source>Wärmeleitwert W/mK</source>
+				<target state="translated">Wärmeleitwert W/mK</target>
+			</trans-unit>
+			<trans-unit id="category.short.detaktatype">
+				<source>DETAKTA Type</source>
+				<target state="translated">DETAKTA Type</target>
+			</trans-unit>
+			<trans-unit id="category.detaktatype">
+				<source>DETAKTA Type</source>
+				<target state="translated">DETAKTA Type</target>
+			</trans-unit>
+			<trans-unit id="category.short.eigenschaft">
+				<source>Eigenschaft</source>
+				<target state="translated">Eigenschaft</target>
+			</trans-unit>
+			<trans-unit id="category.eigenschaft">
+				<source>Eigenschaft</source>
+				<target state="translated">Eigenschaft</target>
+			</trans-unit>
+			<trans-unit id="category.short.beschreibung">
+				<source>Beschreibung</source>
+				<target state="translated">Beschreibung</target>
+			</trans-unit>
+			<trans-unit id="category.beschreibung">
+				<source>Beschreibung</source>
+				<target state="translated">Beschreibung</target>
+			</trans-unit>
+			<trans-unit id="category.short.traeger">
+				<source>Träger</source>
+				<target state="translated">Träger</target>
+			</trans-unit>
+			<trans-unit id="category.traeger">
+				<source>Träger</source>
+				<target state="translated">Träger</target>
+			</trans-unit>
+			<trans-unit id="category.short.traenkung">
+				<source>Tränkung</source>
+				<target state="translated">Tränkung</target>
+			</trans-unit>
+			<trans-unit id="category.traenkung">
+				<source>Tränkung</source>
+				<target state="translated">Tränkung</target>
+			</trans-unit>
+			<trans-unit id="category.short.staerken">
+				<source>Stärken</source>
+				<target state="translated">Stärken</target>
+			</trans-unit>
+			<trans-unit id="category.staerken">
+				<source>Stärken</source>
+				<target state="translated">Stärken</target>
+			</trans-unit>
+			<trans-unit id="category.short.breitenformat">
+				<source>Breiten/Format</source>
+				<target state="translated">Breiten/Format</target>
+			</trans-unit>
+			<trans-unit id="category.breitenformat">
+				<source>Breiten/Format</source>
+				<target state="translated">Breiten/Format</target>
+			</trans-unit>
+			<trans-unit id="category.short.breitenformate">
+				<source>Breiten/Formate</source>
+				<target state="translated">Breiten/Formate</target>
+			</trans-unit>
+			<trans-unit id="category.breitenformate">
+				<source>Breiten/Formate</source>
+				<target state="translated">Breiten/Formate</target>
+			</trans-unit>
+			<trans-unit id="category.short.format">
+				<source>Format</source>
+				<target state="translated">Format</target>
+			</trans-unit>
+			<trans-unit id="category.format">
+				<source>Format</source>
+				<target state="translated">Format</target>
+			</trans-unit>
+			<trans-unit id="category.short.staerken">
+				<source>Stärken</source>
+				<target state="translated">Stärken</target>
+			</trans-unit>
+			<trans-unit id="category.staerken">
+				<source>Stärken</source>
+				<target state="translated">Stärken</target>
+			</trans-unit>
+			<trans-unit id="category.short.breiten">
+				<source>Breiten</source>
+				<target state="translated">Breiten</target>
+			</trans-unit>
+			<trans-unit id="category.breiten">
+				<source>Breiten</source>
+				<target state="translated">Breiten</target>
+			</trans-unit>
+			<trans-unit id="category.short.entspr">
+				<source>Entspr.</source>
+				<target state="translated">Entspr.</target>
+			</trans-unit>
+			<trans-unit id="category.entspr">
+				<source>Entspr.</source>
+				<target state="translated">Entspr.</target>
+			</trans-unit>
+			<trans-unit id="category.short.viskositaet">
+				<source>Viskosität</source>
+				<target state="translated">Viskosität</target>
+			</trans-unit>
+			<trans-unit id="category.viskositaet">
+				<source>Viskosität</source>
+				<target state="translated">Viskosität</target>
+			</trans-unit>
+			<trans-unit id="category.short.inhalttubekartusche">
+				<source>Inhalt Tube / Kartusche</source>
+				<target state="translated">Inhalt Tube / Kartusche</target>
+			</trans-unit>
+			<trans-unit id="category.inhalttubekartusche">
+				<source>Inhalt Tube / Kartusche</source>
+				<target state="translated">Inhalt Tube / Kartusche</target>
+			</trans-unit>
+			<trans-unit id="category.short.erweichungstemperatur">
+				<source>Erweichungs-Temperatur</source>
+				<target state="translated">Erweichungs-Temperatur</target>
+			</trans-unit>
+			<trans-unit id="category.erweichungstemperatur">
+				<source>Erweichungs-Temperatur</source>
+				<target state="translated">Erweichungs-Temperatur</target>
+			</trans-unit>
+			<trans-unit id="category.short.gebinde">
+				<source>Gebinde</source>
+				<target state="translated">Gebinde</target>
+			</trans-unit>
+			<trans-unit id="category.gebinde">
+				<source>Gebinde</source>
+				<target state="translated">Gebinde</target>
+			</trans-unit>
+			<trans-unit id="category.short.lieferform">
+				<source>Lieferform</source>
+				<target state="translated">Lieferform</target>
+			</trans-unit>
+			<trans-unit id="category.lieferform">
+				<source>Lieferform</source>
+				<target state="translated">Lieferform</target>
+			</trans-unit>
+			<trans-unit id="category.short.mischverhaeltnis">
+				<source>Mischverhältnis</source>
+				<target state="translated">Mischverhältnis</target>
+			</trans-unit>
+			<trans-unit id="category.mischverhaeltnis">
+				<source>Mischverhältnis</source>
+				<target state="translated">Mischverhältnis</target>
+			</trans-unit>
+			<trans-unit id="category.short.leiterdurchmesser">
+				<source>Leiterdurchmesser</source>
+				<target state="translated">Leiterdurchmesser</target>
+			</trans-unit>
+			<trans-unit id="category.leiterdurchmesser">
+				<source>Leiterdurchmesser</source>
+				<target state="translated">Leiterdurchmesser</target>
+			</trans-unit>
+			<trans-unit id="category.short.isolation">
+				<source>Isolation</source>
+				<target state="translated">Isolation</target>
+			</trans-unit>
+			<trans-unit id="category.isolation">
+				<source>Isolation</source>
+				<target state="translated">Isolation</target>
+			</trans-unit>
+			<trans-unit id="category.short.kupferleiter">
+				<source>Kupferleiter</source>
+				<target state="translated">Kupferleiter</target>
+			</trans-unit>
+			<trans-unit id="category.kupferleiter">
+				<source>Kupferleiter</source>
+				<target state="translated">Kupferleiter</target>
+			</trans-unit>
+			<trans-unit id="category.short.betriebsspannung">
+				<source>Betriebsspannung</source>
+				<target state="translated">Betriebsspannung</target>
+			</trans-unit>
+			<trans-unit id="category.betriebsspannung">
+				<source>Betriebsspannung</source>
+				<target state="translated">Betriebsspannung</target>
+			</trans-unit>
+			<trans-unit id="category.short.pruefspannung">
+				<source>Prüfspannung</source>
+				<target state="translated">Prüfspannung</target>
+			</trans-unit>
+			<trans-unit id="category.pruefspannung">
+				<source>Prüfspannung</source>
+				<target state="translated">Prüfspannung</target>
+			</trans-unit>
+			<trans-unit id="category.short.beschreibunganwendung">
+				<source>Beschreibung / Anwendung</source>
+				<target state="translated">Beschreibung / Anwendung</target>
+			</trans-unit>
+			<trans-unit id="category.beschreibunganwendung">
+				<source>Beschreibung / Anwendung</source>
+				<target state="translated">Beschreibung / Anwendung</target>
+			</trans-unit>
+			<trans-unit id="category.short.lagerfaehigkeit">
+				<source>Lagerfähigkeit</source>
+				<target state="translated">Lagerfähigkeit</target>
+			</trans-unit>
+			<trans-unit id="category.lagerfaehigkeit">
+				<source>Lagerfähigkeit</source>
+				<target state="translated">Lagerfähigkeit</target>
+			</trans-unit>
+			<trans-unit id="category.short.temperatur">
+				<source>Temperatur</source>
+				<target state="translated">Temperatur</target>
+			</trans-unit>
+			<trans-unit id="category.temperatur">
+				<source>Temperatur</source>
+				<target state="translated">Temperatur</target>
+			</trans-unit>
+			<trans-unit id="category.short.bemerkung">
+				<source>Bemerkung</source>
+				<target state="translated">Bemerkung</target>
+			</trans-unit>
+			<trans-unit id="category.bemerkung">
+				<source>Bemerkung</source>
+				<target state="translated">Bemerkung</target>
+			</trans-unit>
+			<trans-unit id="category.short.spitzenbreite">
+				<source>Spitzenbreite</source>
+				<target state="translated">Spitzenbreite</target>
+			</trans-unit>
+			<trans-unit id="category.spitzenbreite">
+				<source>Spitzenbreite</source>
+				<target state="translated">Spitzenbreite</target>
+			</trans-unit>
+			<trans-unit id="category.short.spitzenbefestigung">
+				<source>Spitzenbefestigung</source>
+				<target state="translated">Spitzenbefestigung</target>
+			</trans-unit>
+			<trans-unit id="category.spitzenbefestigung">
+				<source>Spitzenbefestigung</source>
+				<target state="translated">Spitzenbefestigung</target>
+			</trans-unit>
+			<trans-unit id="category.short.grifflaenge">
+				<source>Grifflänge</source>
+				<target state="translated">Grifflänge</target>
+			</trans-unit>
+			<trans-unit id="category.grifflaenge">
+				<source>Grifflänge</source>
+				<target state="translated">Grifflänge</target>
+			</trans-unit>
+			<trans-unit id="category.short.griffmaterial">
+				<source>Griffmaterial</source>
+				<target state="translated">Griffmaterial</target>
+			</trans-unit>
+			<trans-unit id="category.griffmaterial">
+				<source>Griffmaterial</source>
+				<target state="translated">Griffmaterial</target>
+			</trans-unit>
+			<trans-unit id="category.short.vpe">
+				<source>VPE</source>
+				<target state="translated">VPE</target>
+			</trans-unit>
+			<trans-unit id="category.vpe">
+				<source>VPE</source>
+				<target state="translated">VPE</target>
+			</trans-unit>
+			<trans-unit id="category.short.anwendung">
+				<source>Anwendung</source>
+				<target state="translated">Anwendung</target>
+			</trans-unit>
+			<trans-unit id="category.anwendung">
+				<source>Anwendung</source>
+				<target state="translated">Anwendung</target>
+			</trans-unit>
+			<trans-unit id="category.short.alledatenblaetter">
+				<source>Alle Datenblätter</source>
+				<target state="translated">Alle Datenblätter</target>
+			</trans-unit>
+			<trans-unit id="category.alledatenblaetter">
+				<source>Alle Datenblätter</source>
+				<target state="translated">Alle Datenblätter</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

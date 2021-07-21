@@ -1,0 +1,485 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+This Template is responsible for displaying a single view for a domain object
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        Show.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+  <f:if condition="{category.articles}">
+    <div class="hidden-xs padding-top-20">
+    <table class="table table-striped-detakmblue table-hover-detakmblue table-condensed table-no-border table-small-font">
+      <thead>
+
+      </thead>
+      <tbody>
+      <f:for each="{category.articles}" as="article">
+        <f:if condition="{article.specialtype}=='5'">
+          <f:then>
+            <tr>
+              <td  class="detakta-article-name">{article.name}</td>
+              <td colspan="7"><f:format.raw>{article.description}</f:format.raw></td>
+            </tr>
+          </f:then>
+          <f:else>
+            <f:if condition="{article.specialtype}=='2'">
+              <f:then>
+                <tr class="{article.addclass}">
+
+                <f:if condition="{category.hasdatasheet}">
+                  <f:then>
+                    <td colspan="6" class="detakta-article-name {article.addclass}">{article.name}</td>
+                    <td class="align-right"><a target="_blank"  href="{article.datasheet}" title="Leitet Herunterladen der Datei ein"><img src="fileadmin/datenblaetter/PDF_download_h35.png" title="PDF download" style="" alt="" width="30" height="30"></a></td>
+                  </f:then>
+                  <f:else>
+                    <td colspan="7" class="detakta-article-name {article.addclass}">{article.name}</td>
+                  </f:else>
+                </f:if>
+                </tr>
+              </f:then>
+              <f:else>
+                <f:if condition="{article.specialtype}=='3'">
+                  <f:then>
+                    <tr  class="datasheet-product-header-type-1">
+                      <td class="detakta-article-name">{article.name}</td>
+                      <td><f:format.raw>{article.description}</f:format.raw></td>
+                      <td><f:format.raw>{article.approval}</f:format.raw></td>
+                      <td>{article.annex}</td>
+                      <td><f:format.raw>{article.temperature}</f:format.raw></td>
+                      <td><f:format.nl2br>{article.dimension}</f:format.nl2br></td>
+
+                      <td class="align-right"><f:format.nl2br>{article.standards}</f:format.nl2br></td>
+                    </tr>
+                  </f:then>
+                  <f:else>
+                    <f:if condition="{article.specialtype}=='4'">
+                      <f:then>
+                        <tr >
+                          <td class="detakta-article-name">{article.name}</td>
+                          <td><f:format.raw>{article.description}</f:format.raw></td>
+                          <td><f:format.raw>{article.approval}</f:format.raw></td>
+                          <td>{article.annex}</td>
+                          <td><f:format.raw>{article.temperature}</f:format.raw></td>
+                          <td><f:format.nl2br>{article.dimension}</f:format.nl2br></td>
+                          <td class="images-with-rounded-corners pull-right"><img src="{article.image}"></td>
+                        </tr>
+                      </f:then>
+                      <f:else>
+                        <tr>
+                          <td class="detakta-article-name">{article.name}</td>
+                          <td ><f:format.raw>{article.annex}</f:format.raw></td>
+                          <td>{article.description}</td>
+                          <td><f:format.raw>{article.dimension}</f:format.raw></td>
+                          <td class="images-with-rounded-corners"><img src="{article.image}"></td>
+                          <f:if condition="{category.hasdatasheet}">
+                            <f:then>
+                              <td class="align-center"><a target="_blank"  href="{article.datasheet}" title="Leitet Herunterladen der Datei ein"><img src="fileadmin/datenblaetter/PDF_download_h35.png" title="PDF download" style="" alt="" width="30" height="30"></a></td>
+                            </f:then>
+                            <f:else>
+                              <td></td>
+                            </f:else>
+                          </f:if>
+                        </tr>
+                      </f:else>
+                    </f:if>
+                  </f:else>
+                </f:if>
+              </f:else>
+            </f:if>
+          </f:else>
+        </f:if>
+
+      </f:for>
+      </tbody>
+    </table>
+    </div>
+
+
+    <f:comment>
+
+      MOBILE ANSICHT
+
+
+    </f:comment>
+    <div class="visible-xs padding-top-20">
+      <table class="table table-striped-detakmblue table-hover-detakmblue table-condensed table-no-border table-small-font">
+        <tbody>
+
+
+        <f:for each="{colcollector}" as="specialTypeGroups">
+          <f:comment>
+            Hier werden alle Gruppierungen durchlaufen
+          </f:comment>
+          <f:for each="{specialTypeGroups}" as="colsPerGroup">
+            <f:for each="{colsPerGroup}" as="mobilearticles">
+              <f:comment>
+                Hier wird der aktuelle Type der Anzeige ermittelt
+              </f:comment>
+              <v:variable.set name="currentspecialtype" value="{mobilearticles.specialtype}"/>
+            </f:for>
+          </f:for>
+
+          <f:if condition="{currentspecialtype}==0">
+            <f:then>
+              <f:comment>
+
+
+                ################################################################################################
+                Anzeige des Typs 0
+                ################################################################################################
+
+
+              </f:comment>
+              <f:for each="{specialTypeGroups}" as="colsPerGroup">
+
+                <!-- Produktname -->
+                <tr>
+                  <td>
+                    <f:translate id="category.produkt"/>
+                  </td>
+                  <f:for each="{colsPerGroup}" as="mobilearticles">
+                    <td class="detakta-article-name">{mobilearticles.name}</td>
+                  </f:for>
+                </tr>
+
+                <!-- beschreibung -->
+                <tr>
+                  <td>
+                    <f:translate id="category.zusatz"/>
+                  </td>
+                  <f:for each="{colsPerGroup}" as="mobilearticles">
+                    <td>
+                      <f:format.raw>{mobilearticles.annex}</f:format.raw>
+                    </td>
+                  </f:for>
+                </tr>
+
+
+                <!-- beschreibung -->
+                <tr>
+                  <td>
+                    <f:translate id="category.beschreibunganwendung"/>
+                  </td>
+                  <f:for each="{colsPerGroup}" as="mobilearticles">
+                    <td>
+                      <f:format.raw>{mobilearticles.description}</f:format.raw>
+                    </td>
+                  </f:for>
+                </tr>
+
+
+                <!-- Lieferform -->
+                <tr>
+                  <td>
+                    <f:translate id="category.lieferform"/>
+                  </td>
+                  <f:for each="{colsPerGroup}" as="mobilearticles">
+                    <td>
+                      <f:format.raw>{mobilearticles.dimension}</f:format.raw>
+                    </td>
+                  </f:for>
+                </tr>
+
+
+                <!-- Bild -->
+                <tr>
+                  <td>
+
+                  </td>
+                  <f:for each="{colsPerGroup}" as="mobilearticles">
+                    <td class="images-with-rounded-corners">
+                      <img src="{mobilearticles.image}">
+                    </td>
+                  </f:for>
+                </tr>
+
+
+
+                <!-- datenblatt -->
+                <f:if condition="{category.hasdatasheet}">
+                  <f:then>
+                    <tr>
+                      <td>
+                        <f:translate id="category.datenblatt"/>
+                      </td>
+                      <f:for each="{colsPerGroup}" as="mobilearticles">
+                        <td><a target="_blank"  href="{article.datasheet}"
+                               title="Leitet Herunterladen der Datei ein"><img
+                                src="fileadmin/datenblaetter/PDF_download_h35.png"
+                                title="PDF download" style="" alt="" width="30" height="30"></a>
+                        </td>
+                      </f:for>
+                    </tr>
+                    <f:comment>
+                      Eine leere Zeile fürs Layout
+                    </f:comment>
+
+                  </f:then>
+                </f:if>
+              </f:for>
+
+            </f:then>
+            <f:else>
+              <f:if condition="{currentspecialtype}==1">
+                <f:then>
+                  <f:comment>
+
+                    ################################################################################################
+                    Anzeige des Typs 1
+                    ################################################################################################
+
+
+                  </f:comment>
+
+
+                </f:then>
+                <f:else>
+                  <f:if condition="{currentspecialtype}==2">
+                    <f:then>
+                      <f:comment>
+
+
+                        ################################################################################################
+                        Anzeige des Typs 2
+                        ################################################################################################
+
+
+                      </f:comment>
+                      <!-- Gruppe -->
+                      <tr>
+                        <f:for each="{specialTypeGroups}" as="colsPerGroup">
+                          <f:for each="{colsPerGroup}" as="mobilearticles">
+                            <f:if condition="{category.hasdatasheet}">
+                              <f:then>
+                                <tr>
+                                  <td colspan="<v:math.sum a="{colsWithLabel}" b="-1" />" class="detakta-article-name {mobilearticles.addclass}">
+                                    {mobilearticles.name}
+                                  </td>
+
+                                    <td class="{mobilearticles.addclass}"><a target="_blank"  href="{article.datasheet}"
+                                           title="Leitet Herunterladen der Datei ein"><img
+                                            src="fileadmin/datenblaetter/PDF_download_h35.png"
+                                            title="PDF download" style="" alt="" width="30" height="30"></a>
+                                    </td>
+
+                                </tr>
+
+
+                              </f:then>
+                              <f:else>
+                                <td colspan="{colsWithLabel}" class="detakta-article-name {mobilearticles.addclass}">
+                                {mobilearticles.name}
+                                </td>
+                              </f:else>
+                            </f:if>
+
+                          </f:for>
+
+                        </f:for>
+                      </tr>
+
+                    </f:then>
+                    <f:else>
+                      <f:if condition="{currentspecialtype}==3">
+                        <f:then>
+                          <f:comment>
+
+
+                            ################################################################################################
+                            Anzeige des Typs 3
+                            ################################################################################################
+
+
+                          </f:comment>
+
+
+                        </f:then>
+                        <f:else>
+                          <f:if condition="{currentspecialtype}==4">
+                            <f:then>
+                              <f:comment>
+
+
+                                ################################################################################################
+                                Anzeige des Typs 4
+                                ################################################################################################
+
+
+                              </f:comment>
+                              <f:for each="{specialTypeGroups}" as="colsPerGroup">
+
+                                <!-- Produktname -->
+                                <tr class="headerdivider">
+                                  <td class="rowheader headercolumn">
+                                    <f:translate id="category.produkt"/>
+                                  </td>
+                                  <f:for each="{colsPerGroup}" as="mobilearticles">
+                                    <td class="detakta-article-name">{mobilearticles.name}</td>
+                                  </f:for>
+                                </tr>
+
+                                <!-- spitzenbreite -->
+                                <tr>
+                                  <td class="rowheader headercolumn">
+                                    <f:translate id="category.spitzenbreite"/>
+                                  </td>
+                                  <f:for each="{colsPerGroup}" as="mobilearticles">
+                                    <td>
+                                      <f:format.raw>{mobilearticles.description}</f:format.raw>
+                                    </td>
+                                  </f:for>
+                                </tr>
+
+                                <!-- spitzenbefestigung -->
+                                <tr>
+                                  <td class="rowheader headercolumn">
+                                    <f:translate id="category.spitzenbefestigung"/>
+                                  </td>
+                                  <f:for each="{colsPerGroup}" as="mobilearticles">
+                                    <td>
+                                      <f:format.raw>{mobilearticles.approval}</f:format.raw>
+                                    </td>
+                                  </f:for>
+                                </tr>
+                                <!-- grifflänge -->
+                                <tr>
+                                  <td class="rowheader headercolumn">
+                                    <f:translate id="category.grifflaenge"/>
+                                  </td>
+                                  <f:for each="{colsPerGroup}" as="mobilearticles">
+                                    <td>
+                                      <f:format.raw>{mobilearticles.annex}</f:format.raw>
+                                    </td>
+                                  </f:for>
+                                </tr>
+                                <!-- griffmaterial -->
+                                <tr>
+                                  <td class="rowheader headercolumn">
+                                    <f:translate id="category.griffmaterial"/>
+                                  </td>
+                                  <f:for each="{colsPerGroup}" as="mobilearticles">
+                                    <td>
+                                      <f:format.raw>{mobilearticles.temperature}</f:format.raw>
+                                    </td>
+                                  </f:for>
+                                </tr>
+
+
+
+
+
+
+                                <!-- vpe -->
+                                <tr>
+                                  <td class="rowheader headercolumn">
+                                    <f:translate id="category.vpe"/>
+                                  </td>
+                                  <f:for each="{colsPerGroup}" as="mobilearticles">
+                                    <td>
+                                      <f:format.raw>{mobilearticles.dimension}</f:format.raw>
+                                    </td>
+                                  </f:for>
+                                </tr>
+
+
+                                <!-- Bild -->
+                                <tr>
+                                  <td class="rowheader headercolumn">
+
+                                  </td>
+                                  <f:for each="{colsPerGroup}" as="mobilearticles">
+                                    <td class="images-with-rounded-corners">
+                                      <img src="{mobilearticles.image}">
+                                    </td>
+                                  </f:for>
+                                </tr>
+
+
+
+                                <!-- datenblatt -->
+                                <f:if condition="{category.hasdatasheet}">
+                                  <f:then>
+                                    <tr>
+                                      <td class="rowheader headercolumn">
+                                        <f:translate id="category.datenblatt"/>
+                                      </td>
+                                      <f:for each="{colsPerGroup}" as="mobilearticles">
+                                        <td><a target="_blank"  href="{article.datasheet}"
+                                               title="Leitet Herunterladen der Datei ein"><img
+                                                src="fileadmin/datenblaetter/PDF_download_h35.png"
+                                                title="PDF download" style="" alt="" width="30" height="30"></a>
+                                        </td>
+                                      </f:for>
+                                    </tr>
+                                    <f:comment>
+                                      Eine leere Zeile fürs Layout
+                                    </f:comment>
+
+                                  </f:then>
+                                </f:if>
+                              </f:for>
+                            </f:then>
+                            <f:else>
+                              <f:if condition="{currentspecialtype}==5">
+                                <f:then>
+                                  <f:comment>
+
+
+                                    ################################################################################################
+                                    Anzeige des Typs 5
+                                    ################################################################################################
+
+
+                                  </f:comment>
+
+
+                                </f:then>
+                                <f:else>
+                                  <f:if condition="{currentspecialtype}==6">
+                                    <f:then>
+                                      <f:comment>
+
+
+                                        ################################################################################################
+                                        Anzeige des Typs 6
+                                        ################################################################################################
+
+
+                                      </f:comment>
+
+
+                                    </f:then>
+                                    <f:else>
+
+                                    </f:else>
+                                  </f:if>
+                                </f:else>
+                              </f:if>
+                            </f:else>
+                          </f:if>
+                        </f:else>
+                      </f:if>
+                    </f:else>
+                  </f:if>
+                </f:else>
+              </f:if>
+            </f:else>
+          </f:if>
+
+        </f:for>
+
+
+        </tbody>
+      </table>
+    </div>
+
+  </f:if>
+</f:section>
+</html>

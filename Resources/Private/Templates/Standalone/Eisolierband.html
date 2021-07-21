@@ -1,0 +1,134 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:F="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+This Template is responsible for displaying a single view for a domain object
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        Show.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+  <div class="images-with-rounded-corners padding-top-10">
+    <img src="{category.image}">
+  </div>
+
+  <h3  >{category.headline}</h3>
+  <div>
+    {category.description}
+  </div>
+  <f:if condition="{category.articles}">
+    <div class="hidden-xs padding-top-20">
+      <table class="table table-striped-detakmblue table-hover table-condensed table-no-border table-small-font">
+        <thead align="justify">
+        <tr class="datasheet-product-header-type-1">
+          <td><f:translate id="category.produkt" /></td>
+          <td><f:translate id="category.temperatur" /></td>
+          <td><f:translate id="category.staerken" /></td>
+          <td><f:translate id="category.farbe" /></td>
+          <f:if condition="{category.hasdatasheet}">
+            <f:then>
+              <td><f:translate id="category.datenblatt" /></td>
+            </f:then>
+          </f:if>
+        </tr>
+        </thead>
+        <tbody>
+        <f:for each="{category.articles}" as="article">
+          <tr >
+            <td class="detakta-article-name"><f:format.raw>{article.name}</f:format.raw></td>
+            <td><f:format.raw>{article.temperature}</f:format.raw></td>
+            <td><f:format.raw>{article.dimension}</f:format.raw></td>
+            <td><f:format.raw>{article.standards}</f:format.raw></td>
+            <f:if condition="{category.hasdatasheet}">
+              <f:then>
+                <f:if condition="{article.datasheet}">
+                  <f:then>
+                <td class="align-center"><a target="_blank" href="{article.datasheet}" title="Leitet Herunterladen der Datei ein"><img src="fileadmin/datenblaetter/PDF_download_h35.png" title="PDF download" style="" alt="" width="30" height="30"></a></td>
+                  </f:then>
+                  <f:else>
+                    <td></td>
+                  </f:else>
+                </f:if>
+              </f:then>
+            </f:if>
+          </tr>
+        </f:for>
+        </tbody>
+      </table>
+
+
+
+    </div>
+    <div class="visible-xs padding-top-20">
+      <table class="table table-striped-detakmblue table-hover table-condensed table-no-border table-small-font">
+        <tbody>
+      <f:for each="{colcollector}" as="subCollector">
+
+        <f:comment>
+          Prüfen ob überhaupt Artikel vorhanden sind, die nicht Sonderartikel sind
+        </f:comment>
+
+
+        <tr class="headerdivider">
+          <td  class="rowheader headercolumn"><f:translate id="category.short.produkt" /></td>
+            <f:for each="{subCollector}" as="mobilearticles">
+              <td class="detakta-article-name"><f:format.raw>{mobilearticles.name}</f:format.raw></td>
+            </f:for>
+        </tr>
+        <tr>
+          <td class="rowheader headercolumn"><f:translate id="category.short.temperatur" /></td>
+            <f:for each="{subCollector}" as="mobilearticles">
+              <td ><f:format.raw>{mobilearticles.temperature}</f:format.raw></td>
+            </f:for>
+        </tr>
+        <tr>
+          <td class="rowheader headercolumn"><f:translate id="category.short.staerken" /></td>
+            <f:for each="{subCollector}" as="mobilearticles">
+              <td ><f:format.raw>{mobilearticles.dimension}</f:format.raw></td>
+            </f:for>
+        </tr>
+        <tr>
+          <td class="rowheader headercolumn"><f:translate id="category.short.farbe" /></td>
+            <f:for each="{subCollector}" as="mobilearticles">
+              <td ><f:format.raw>{mobilearticles.standards}</f:format.raw></td>
+            </f:for>
+        </tr>
+        <f:if condition="{category.hasdatasheet}">
+          <f:then>
+            <tr>
+              <td class="rowheader headercolumn"><f:translate id="category.short.datenblatt" /></td>
+              <f:for each="{subCollector}" as="mobilearticles">
+                <f:if condition="{mobilearticles.datasheet}">
+                  <f:then>
+                    <td ><a  target="_blank"  href="{mobilearticles.datasheet}" title="Leitet Herunterladen der Datei ein"><img src="fileadmin/datenblaetter/PDF_download_h35.png" title="PDF download" style="" alt="" width="30" height="30"></a></td>
+                  </f:then>
+                  <f:else>
+                    <td></td>
+                  </f:else>
+                </f:if>
+
+              </f:for>
+            </tr>
+
+          </f:then>
+        </f:if>
+        <tr>
+          <td ></td>
+          <f:for each="{subCollector}" as="mobilearticles">
+            <td ></td>
+          </f:for>
+        </tr>
+      </f:for>
+      </tbody>
+      </table>
+
+    </div>
+  </f:if>
+</f:section>
+</html>

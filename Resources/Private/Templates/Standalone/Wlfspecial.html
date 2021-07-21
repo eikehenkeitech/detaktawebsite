@@ -1,0 +1,92 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+This Template is responsible for displaying a single view for a domain object
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+Resources:
+Private:
+Templates:
+Show.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+  <div class="padding-top-10"></div>
+  <span class="wlf-headline">{category.headline}</span>
+  <div>
+    {category.description}
+  </div>
+  <div class="images-with-rounded-corners padding-top-10">
+    <img src="{category.image}">
+  </div>
+  <f:if condition="{category.articles}">
+    <div class=" padding-top-20">
+      <table class="table table-striped-detakmblue table-hover-detakmblue table-condensed table-no-border table-small-font">
+        <thead align="justify">
+        <tr  class="datasheet-product-header-type-1">
+          <td class="w-25"><f:translate id="category.detaktatype" /></td>
+          <td class="w-10"><f:translate id="category.farbe" /></td>
+          <td class="w-50"><f:translate id="category.eigenschaft" /></td>
+          <f:if condition="{category.hasdatasheet}">
+            <f:then>
+              <td class="w-15"><f:translate id="category.datenblatt" /></td>
+            </f:then>
+          </f:if>
+
+        </tr>
+        </thead>
+        <tbody>
+        <f:for each="{category.articles}" as="article">
+          <f:if condition="{article.part}=='1'">
+
+            <f:then>
+              <v:variable.set name="hassonderarticle" value="1" />
+
+            </f:then>
+            <f:else>
+              <f:if condition="{article.desconly}=='1'">
+                <f:then> </tbody>
+      </table>
+      <table class="table table-striped-detakmblue table-hover-detakmblue table-condensed table-no-border table-small-font">
+        <tbody>
+                  <tr  class="datasheet-product-subheader-type-1">
+                  <f:if condition="{category.hasdatasheet}">
+                    <f:then>
+                      <td colspan="4" class="description-only wlfdesc">{article.description}</td>
+                    </f:then>
+                    <f:else>
+                      <td colspan="3" class="description-only wlfdesc">{article.description}</td>
+                    </f:else>
+                  </f:if>
+                  </tr>
+                </f:then>
+                <f:else>
+                  <tr>
+                    <td class="w-25 detakta-article-name{article.separatline}">{article.name}</td>
+                    <td class="w-10">{article.annex}</td>
+                    <td class="w-50">{article.description}</td>
+                    <f:if condition="{category.hasdatasheet}">
+                      <f:then>
+                        <td class="w-15 align-center"><a target="_blank"  href="{article.datasheet}" title="Leitet Herunterladen der Datei ein"><img src="fileadmin/datenblaetter/PDF_download_h35.png" title="PDF download" style="" alt="" width="30" height="30"></a></td>
+                      </f:then>
+                    </f:if>
+
+                  </tr>
+                </f:else>
+
+              </f:if>
+
+            </f:else>
+          </f:if>
+        </f:for>
+        </tbody>
+      </table>
+
+
+    </div>
+
+  </f:if>
+</f:section>
+</html>

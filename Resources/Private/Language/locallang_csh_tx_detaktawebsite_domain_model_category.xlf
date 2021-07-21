@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-11-07T09:04:49Z" product-name="detaktawebsite">
+		<header/>
+		<body>
+			<trans-unit id="tx_detaktawebsite_domain_model_articletables">
+				<source>Detakta Website - Artikel Tabellen</source>
+			</trans-unit>
+			<trans-unit id="tx_detaktawebsite_domain_model_articletables.description">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="name.description">
+				<source>name</source>
+			</trans-unit>
+			<trans-unit id="headline.description">
+				<source>headline</source>
+			</trans-unit>
+			<trans-unit id="description.description">
+				<source>description</source>
+			</trans-unit>
+			<trans-unit id="image.description">
+				<source>image</source>
+			</trans-unit>
+			<trans-unit id="viewname.description">
+				<source>viewname</source>
+			</trans-unit>
+			<trans-unit id="dirshortcut.description">
+				<source>dirshortcut</source>
+			</trans-unit>
+			<trans-unit id="hasdatasheet.description">
+				<source>hasdatasheet</source>
+			</trans-unit>
+			<trans-unit id="nameforplugin.description">
+				<source>nameforplugin</source>
+			</trans-unit>
+			<trans-unit id="articles.description">
+				<source>articles</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

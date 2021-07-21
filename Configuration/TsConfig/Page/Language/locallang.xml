@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for the Fluid Content: Bootstrap extension</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+
+			<label index="skip_navigation">Skip navigation</label>
+
+			<label index="copyright">t3Bootstrap template by</label>
+
+			<label index="search">Search</label>
+
+			<!-- Link titles -->
+			<label index="more_link_titleText">Read more</label>
+			<label index="more_link_altText">Read more</label>
+			<label index="next_link_titleText">Read more</label>
+			<label index="next_link_altText">Read more</label>
+			
+		
+			
+
+			<!-- Formhandler Demo -->
+			<label index="label_fieldset">Contact Form</label>
+			<label index="name">Name:</label>
+			<label index="anrede">Anrede:</label>
+			<label index="email">E-Mail:</label>
+			<label index="message">Your Message:</label>
+			<label index="contact-type">Contact reason:</label>
+			<label index="contact-type.private">Private</label>
+			<label index="contact-type.commercial">Commercial</label>
+			<label index="interests">My interests:</label>
+			<label index="interests.sports">Sports</label>
+			<label index="interests.music">Music</label>
+			<label index="interests.movies">Movies</label>
+			<label index="interests.eating">Eating</label>
+			<label index="receive-copy">I want to receive a copy of this request</label>
+			<label index="confirm">Confirm</label>
+			<label index="submit_reload">Upload</label>
+			<label index="submit">Send</label>
+			<label index="next">Next Step</label>
+			<label index="prev">Previous Step</label>
+			<label index="uploadedFiles">Uploaded files:</label>
+			<label index="uploadedFiles_count">Uploaded files:</label>
+			<label index="allowedTypes">Allowed:</label>
+			<label index="maxSize">Max size:</label>
+
+			<label index="greetings">Dear</label>
+			<label index="email_user_subject">Your contact request</label>
+			<label index="email_user_text">We have received your request via the contact form on www.example.org. We will process your request and get in contact with you
+				soon.</label>
+			<label index="email_user_footer">---------------------------------- This message was created automatically. --------------------------------</label>
+			<label index="email_admin_subject">Contact request</label>
+			<label index="email_admin_text">A user filled out the contact form on www.example.org.</label>
+			<label index="email_admin_footer">---------------------------------- This message was created automatically. --------------------------------</label>
+			<label index="error_name_required">Please enter your name!</label>
+			<label index="error_email_required">Please enter your email address!</label>
+			<label index="error_email_email">Please enter a valid email address!</label>
+			<label index="error_message_required">Please enter a message!</label>
+			<label index="error_file_fileAllowedTypes">Only ###allowedTypes### are allowed!</label>
+			<label index="error_file_fileMaxSize">The size of the file must not exceed 5MB!</label>
+			<label index="error_file_fileMaxCount">You may only upload up to ###maxCount### files!</label>
+			
+
+		</languageKey>
+		<languageKey index="de" type="array">
+
+			<label index="tt_content.cols">Breite gemessen an Grid-Spaltenanzahl pro Bildspalte</label>
+			<label index="skip_navigation">Zum Inhalt springen</label>
+
+			<label index="copyright">t3Bootstrap Template von</label>
+
+			<label index="search">Suchen</label>
+
+			<!-- Link titles -->
+			<label index="more_link_titleText">Weiterlesen</label>
+			<label index="more_link_altText">Weiterlesen</label>
+			<label index="next_link_titleText">Weiterlesen</label>
+			<label index="next_link_altText">Weiterlesen</label>
+
+			<!-- News ext -->
+			<label index="news.share">Teilen</label>
+
+			<!-- Formhandler Demo -->
+			<label index="label_fieldset">Kontaktformular</label>
+			<label index="name">Name:</label>
+			<label index="anrede">Anrede:</label>
+			<label index="email">E-Mail:</label>
+			<label index="message">Ihre Nachricht:</label>
+			<label index="contact-type">Grund:</label>
+			<label index="contact-type.private">Privat</label>
+			<label index="contact-type.commercial">Geschäftlich</label>
+			<label index="interests">Meine Interessen:</label>
+			<label index="interests.sports">Sport</label>
+			<label index="interests.music">Musik</label>
+			<label index="interests.movies">Filme</label>
+			<label index="interests.eating">Essen</label>
+			<label index="receive-copy">Ich möchte eine Kopie erhalten</label>
+			<label index="attachments">Anhänge:</label>
+			<label index="attachment">Anhang:</label>
+			<label index="confirm">Bestätigen</label>
+			<label index="submit">Senden</label>
+			<label index="submit_reload">Hochladen</label>
+			<label index="next">Weiter</label>
+			<label index="prev">Zurück</label>
+			<label index="uploadedFiles">Hochgeladene Dateien:</label>
+			<label index="uploadedFiles_count">Hochgeladene Dateien:</label>
+			<label index="allowedTypes">Erlaubt:</label>
+			<label index="maxSize">Maximale Größe:</label>
+
+
+			<label index="greetings">Dear</label>
+			<label index="email_user_subject">Ihre Kontaktanfrage</label>
+			<label index="email_user_text"></label>
+			<label index="email_user_footer"></label>
+			<label index="email_admin_subject">Kontaktanfrage</label>
+			<label index="email_admin_text"></label>
+			<label index="email_admin_footer"></label>
+			<label index="error_name_required">Bitte geben Sie Ihren Namen ein!</label>
+			<label index="error_email_required">Bitte geben Sie Ihre Email-Adresse ein!</label>
+			<label index="error_email_email">Bitte geben Sie eine gültige Email-Adresse ein!</label>
+			<label index="error_message_required">Bitte geben Sie eine Nachricht ein!</label>
+
+
+
+
+			<label index="other">Weitere</label>
+
+		</languageKey>
+	</data>
+</T3locallang>

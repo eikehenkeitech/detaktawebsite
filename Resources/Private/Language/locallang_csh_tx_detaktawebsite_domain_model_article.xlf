@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-11-07T09:04:49Z" product-name="detaktawebsite">
+		<header/>
+		<body>
+			<trans-unit id="tx_detaktawebsite_domain_model_articletables">
+				<source>Detakta Website - Artikel Tabellen</source>
+			</trans-unit>
+			<trans-unit id="tx_detaktawebsite_domain_model_articletables.description">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="name.description">
+				<source>name</source>
+			</trans-unit>
+			<trans-unit id="description.description">
+				<source>description</source>
+			</trans-unit>
+			<trans-unit id="part.description">
+				<source>part</source>
+			</trans-unit>
+			<trans-unit id="position.description">
+				<source>position</source>
+			</trans-unit>
+			<trans-unit id="approval.description">
+				<source>approval</source>
+			</trans-unit>
+			<trans-unit id="annex.description">
+				<source>annex</source>
+			</trans-unit>
+			<trans-unit id="temperature.description">
+				<source>temperature</source>
+			</trans-unit>
+			<trans-unit id="diacstrength.description">
+				<source>diacstrength</source>
+			</trans-unit>
+			<trans-unit id="dimension.description">
+				<source>dimension</source>
+			</trans-unit>
+			<trans-unit id="standards.description">
+				<source>standards</source>
+			</trans-unit>
+			<trans-unit id="remark.description">
+				<source>remark</source>
+			</trans-unit>
+			<trans-unit id="datasheet.description">
+				<source>datasheet</source>
+			</trans-unit>
+			<trans-unit id="image.description">
+				<source>image</source>
+			</trans-unit>
+			<trans-unit id="separatline.description">
+				<source>separatline</source>
+			</trans-unit>
+			<trans-unit id="desconly.description">
+				<source>desconly</source>
+			</trans-unit>
+			<trans-unit id="ignorename.description">
+				<source>ignorename</source>
+			</trans-unit>
+			<trans-unit id="specialtype.description">
+				<source>specialtype</source>
+			</trans-unit>
+			<trans-unit id="addclass.description">
+				<source>addclass</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

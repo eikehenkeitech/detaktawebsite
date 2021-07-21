@@ -1,0 +1,145 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+This Template is responsible for displaying a single view for a domain object
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        Show.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+  <f:if condition="{category.articles}">
+    <div class=" padding-top-20">
+    <table class="table table-striped-detakmblue table-hover-detakmblue table-condensed table-no-border table-small-font">
+
+      <tbody>
+      <f:for each="{category.articles}" as="article">
+        <f:if condition="{article.specialtype}=='5'">
+          <f:then>
+            <tr>
+              <td  class="detakta-article-name">{article.name}</td>
+              <td colspan="7"><f:format.raw>{article.description}</f:format.raw></td>
+            </tr>
+          </f:then>
+          <f:else>
+            <f:if condition="{article.specialtype}=='2'">
+              <f:then>
+                <tr class="{article.addclass}">
+
+                <f:if condition="{category.hasdatasheet}">
+                  <f:then>
+                    <tr>
+                      <td  class="detakta-article-name">{article.name}</td>
+                      <td>{article.description}</td>
+                      <td class="pull-right"><a target="_blank"  href="{article.temperature}" title="Leitet Herunterladen der Datei ein"><img src="fileadmin/datenblaetter/PDF_download_h35.png" title="PDF download" style="" alt="" width="30" height="30"></a></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td>{article.annex}</td>
+                      <td class="pull-right"><a target="_blank"  href="{article.approval}" title="Leitet Herunterladen der Datei ein"><img src="fileadmin/datenblaetter/PDF_download_h35.png" title="PDF download" style="" alt="" width="30" height="30"></a></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td class="padding-12-important">{article.diacstrength}</td>
+                      <td></td>
+                    </tr>
+                    <tr >
+                      <td></td>
+                      <td class="padding-12-important">{article.dimension}</td>
+                      <td></td>
+                    </tr>
+                    <tr >
+                      <td></td>
+                      <td class="padding-12-important">{article.standards}</td>
+                      <td></td>
+                    </tr>
+                  </f:then>
+                  <f:else>
+                    <tr>
+                      <td  class="detakta-article-name">{article.name}</td>
+                      <td class="padding-12-important">{article.description}</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td class="padding-12-important">{article.annex}</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td  class="padding-12-important">{article.diacstrength}</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td  class="padding-12-important">{article.dimension}</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td  class="padding-12-important">{article.standards}</td>
+                    </tr>
+                  </f:else>
+                </f:if>
+                </tr>
+              </f:then>
+              <f:else>
+                <f:if condition="{article.specialtype}=='3'">
+                  <f:then>
+                    <tr class="headerbold">
+                      <td class="detakta-article-name" colspan="2">{article.name}</td>
+                      <td><f:format.raw>{article.annex}</f:format.raw></td>
+                      <td><f:format.nl2br><f:format.raw>{article.remark}</f:format.raw></f:format.nl2br></td>
+                      <td><f:format.raw>{article.description}</f:format.raw></td>
+                      <td><f:format.nl2br>{article.dimension}</f:format.nl2br></td>
+                      <td class="pull-right">{article.image}</td>
+                    </tr>
+                  </f:then>
+                  <f:else>
+                    <f:if condition="{article.specialtype}=='4'">
+                      <f:then>
+                        <tr class="headerbold">
+                          <td class="detakta-article-name">{article.name}</td>
+                          <td><f:format.raw>{article.approval}</f:format.raw></td>
+                          <td><f:format.raw>{article.annex}</f:format.raw></td>
+                          <td><f:format.nl2br><f:format.raw>{article.remark}</f:format.raw></f:format.nl2br></td>
+                          <td><f:format.raw>{article.description}</f:format.raw></td>
+                          <td><f:format.nl2br>{article.dimension}</f:format.nl2br></td>
+                          <td class="images-with-rounded-corners pull-right"><img src="{article.image}"></td>
+                        </tr>
+                      </f:then>
+                      <f:else>
+                        <tr>
+                          <td class="detakta-article-name">{article.name}</td>
+                          <td ><f:format.raw>{article.annex}</f:format.raw></td>
+                          <td>{article.description}</td>
+                          <td><f:format.raw>{article.dimension}</f:format.raw></td>
+                          <td class="images-with-rounded-corners"><img src="{article.image}"></td>
+                          <f:if condition="{category.hasdatasheet}">
+                            <f:then>
+                              <td class="align-center"><a target="_blank"  href="{article.datasheet}" title="Leitet Herunterladen der Datei ein"><img src="fileadmin/datenblaetter/PDF_download_h35.png" title="PDF download" style="" alt="" width="30" height="30"></a></td>
+                            </f:then>
+                            <f:else>
+                              <td></td>
+                            </f:else>
+                          </f:if>
+                        </tr>
+                      </f:else>
+                    </f:if>
+                  </f:else>
+                </f:if>
+              </f:else>
+            </f:if>
+          </f:else>
+        </f:if>
+
+      </f:for>
+      </tbody>
+    </table>
+
+
+    </div>
+  </f:if>
+</f:section>
+</html>
