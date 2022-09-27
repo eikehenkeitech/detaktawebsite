@@ -75,13 +75,7 @@ class CategoryController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
      */
     public function showAction(\Itechnology\Detaktawebsite\Domain\Model\Category $category)
     {
-        /*
-        $categoryname = $this->settings['category']['name'] ?: 'Isolierschlauch';
-        $categories = $this->categoryRepository->findByName($categoryname);
-        $mainCategory = $categories[0];
-        $Uid = $mainCategory->getUid();
-        $myCategory = $this->categoryRepository->findByUid($Uid);
-        */
+
 
         $this->view->assign('category', $myCategory);
     }
