@@ -29,10 +29,10 @@ class ArticleRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
         $queryParser = $this->objectManager->get(\TYPO3\CMS\Extbase\Persistence\Generic\Storage\Typo3DbQueryParser::class);
 
 
-//        \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump('DUMP Query');
-//        \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($queryParser->convertQueryToDoctrineQueryBuilder($query)->getSQL());
-//        \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump('ArticleRepository Initialized');
-
+//        $t = \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump('DUMP Query');
+//        $t .=\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($queryParser->convertQueryToDoctrineQueryBuilder($query)->getSQL());
+//        $t .= \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump('ArticleRepository Initialized');
+//	file_put_contents('/var/www/vhosts/detakta.de/composer11.detakta.de/httpdocs/var/log/tt.log', $t);
 
         return $query->execute();
 

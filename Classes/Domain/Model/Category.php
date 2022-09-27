@@ -493,7 +493,7 @@ class Category extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
                 }
             }
 
-            file_put_contents($tmproot . '/tmp/collectorRows', var_export($collectorRows, true));
+            //file_put_contents($tmproot . '/tmp/collectorRows', var_export($collectorRows, true));
 
             /*
              * Bis hier OK
@@ -505,7 +505,7 @@ class Category extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
             }
         }
 
-        file_put_contents($tmproot . '/tmp/colCollector', var_export($colCollector, true));
+        //file_put_contents($tmproot . '/tmp/colCollector', var_export($colCollector, true));
 
         return $colCollector;
     }

@@ -11,32 +11,32 @@ $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['detakta'] = 'EXT:detaktawebsite/C
 
 call_user_func(
     function($extKey)
-    {
-        /*
-                \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-                    'Itechnology.Detaktawebsite',
-                    'Articletables',
-                    [
-                        'Category' => 'list, show, showcatname',
-                        'Article' => 'list'
-                    ],
-                    // non-cacheable actions
-                    [
-                        'Category' => 'list, show, showcatname',
-                        'Article' => 'list'
-                    ]
-                );
-         */
+	{
+/*
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+            'Itechnology.Detaktawebsite',
+            'Articletables',
+            [
+                'Category' => 'list, show, showcatname',
+                'Article' => 'list'
+            ],
+            // non-cacheable actions
+            [
+                'Category' => 'list, show, showcatname',
+                'Article' => 'list'
+            ]
+        );
+ */	
+	\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
             'Detaktawebsite',
             'Articletables',
-            [\Itechnology\Detaktawebsite\Controller\CategoryController::class => 'list, show, showcatname',\Itechnology\Detaktawebsite\Controller\ArticleController::class => 'list'],
-            [\Itechnology\Detaktawebsite\Controller\CategoryController::class => 'list, show, showcatname',\Itechnology\Detaktawebsite\Controller\ArticleController::class => 'list']
+	    [\Itechnology\Detaktawebsite\Controller\CategoryController::class => 'list, show, showcatname',\Itechnology\Detaktawebsite\Controller\ArticleController::class => 'list'],
+	    [\Itechnology\Detaktawebsite\Controller\CategoryController::class => 'list, show, showcatname',\Itechnology\Detaktawebsite\Controller\ArticleController::class => 'list']
         );
 
-        // wizards
-        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-            'mod {
+	// wizards
+	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+		'mod {
 			wizards.newContentElement.wizardItems.plugins {
 				elements {
 					articletables {
@@ -52,7 +52,7 @@ call_user_func(
 				show = *
 			}
 	   }'
-        );
+	);
     },
     $_EXTKEY
 );

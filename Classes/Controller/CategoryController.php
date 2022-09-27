@@ -1,9 +1,9 @@
 <?php
 namespace Itechnology\Detaktawebsite\Controller;
 
+use TYPO3\CMS\Core\Cache\Backend\NullBackend;
 use Itechnology\Detaktawebsite\Domain\Repository\ArticleRepository;
 use Itechnology\Detaktawebsite\Domain\Repository\CategoryRepository;
-use TYPO3\CMS\Core\Cache\Backend\NullBackend;
 /***
  *
  * This file is part of the "Detakta Website" Extension for TYPO3 CMS.
@@ -26,8 +26,9 @@ class CategoryController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
      * @var \Itechnology\Detaktawebsite\Domain\Repository\CategoryRepository
      * @TYPO3\CMS\Extbase\Annotation\Inject
      */
-//    protected $categoryRepository = null;
+    //protected $categoryRepository = null;
     private CategoryRepository $categoryRepository;
+//    private $categoryRepository;
 
     /**
      * articleRepository
@@ -35,20 +36,36 @@ class CategoryController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
      * @var \Itechnology\Detaktawebsite\Domain\Repository\ArticleRepository
      * @TYPO3\CMS\Extbase\Annotation\Inject
      */
-//    protected $articleRepository = null;
+    //protected $articleRepository = null;
     private ArticleRepository $articleRepository;
-
-
 
     /**
      * @var string
      */
     protected $myPath = '';
 
+
+
+    public function injectArticleRepository(ArticleRepository $articleRepository): void
+    {
+        $this->articleRepository = $articleRepository;
+    }
+
+    /**
+     * Inject the product repository
+     *
+     * @param \Itechnology\Detaktawebsite\Domain\Repository\CategoryRepository $categoryRepository
+     */
+    public function injectCategoryRepository(CategoryRepository $categoryRepository)
+    {
+        $this->categoryRepository = $categoryRepository;
+    }
+
     function initializeAction()
     {
         $this->myPath = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath('detaktawebsite');
         $this->articleRepository = $this->objectManager->get(ArticleRepository::class);
+
         $this->articleRepository->setDefaultOrderings(['position' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING]);
 
         $this->extensionName = 'detaktawebsite';
@@ -64,7 +81,8 @@ class CategoryController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
         //$categoryname = $this->settings['category']['name'] ?: 'Isolierschlauch';
         //$categories= $this->categoryRepository->findSearchForm($categoryname);
         //$this->view->assign('categories', $categories);
-        $this->redirect('showcatname');
+//	    $this->redirect('showcatname');
+	    $this->showcatnameAction();
     }
 
     /**
@@ -75,7 +93,13 @@ class CategoryController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
      */
     public function showAction(\Itechnology\Detaktawebsite\Domain\Model\Category $category)
     {
-
+        /*
+        $categoryname = $this->settings['category']['name'] ?: 'Isolierschlauch';
+        $categories = $this->categoryRepository->findByName($categoryname);
+        $mainCategory = $categories[0];
+        $Uid = $mainCategory->getUid();
+        $myCategory = $this->categoryRepository->findByUid($Uid);
+        */
 
         $this->view->assign('category', $myCategory);
     }
