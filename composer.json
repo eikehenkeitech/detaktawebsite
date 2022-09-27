@@ -1,0 +1,27 @@
+{
+    "name": "itechnology/detaktawebsite",
+    "type": "typo3-cms-extension",
+    "description": "",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Eike Lars Henke",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Itechnology\\Contentpack\\": "Classes"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "detaktawebsite"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Itechnology\\Contentpack\\Tests\\": "Tests"
+        }
+    }
+}
