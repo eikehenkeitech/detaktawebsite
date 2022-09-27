@@ -1,6 +1,8 @@
 <?php
 namespace Itechnology\Detaktawebsite\Controller;
 
+use Itechnology\Detaktawebsite\Domain\Repository\ArticleRepository;
+use Itechnology\Detaktawebsite\Domain\Repository\CategoryRepository;
 use TYPO3\CMS\Core\Cache\Backend\NullBackend;
 /***
  *
@@ -24,7 +26,8 @@ class CategoryController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
      * @var \Itechnology\Detaktawebsite\Domain\Repository\CategoryRepository
      * @TYPO3\CMS\Extbase\Annotation\Inject
      */
-    protected $categoryRepository = null;
+//    protected $categoryRepository = null;
+    private CategoryRepository $categoryRepository;
 
     /**
      * articleRepository
@@ -32,7 +35,10 @@ class CategoryController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
      * @var \Itechnology\Detaktawebsite\Domain\Repository\ArticleRepository
      * @TYPO3\CMS\Extbase\Annotation\Inject
      */
-    protected $articleRepository = null;
+//    protected $articleRepository = null;
+    private ArticleRepository $articleRepository;
+
+
 
     /**
      * @var string
@@ -42,6 +48,7 @@ class CategoryController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
     function initializeAction()
     {
         $this->myPath = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath('detaktawebsite');
+        $this->articleRepository = $this->objectManager->get(ArticleRepository::class);
         $this->articleRepository->setDefaultOrderings(['position' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING]);
 
         $this->extensionName = 'detaktawebsite';
@@ -97,6 +104,7 @@ class CategoryController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
          * Create Standalone View for specific Category
          */
         //\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($this->categoryRepository);
+        $this->categoryRepository = $this->objectManager->get(CategoryRepository::class);
         $categories = $this->categoryRepository->findSearchForm($categoryname);
         //\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($this->categoryRepository);
         //$queryParser = $this->objectManager->get(\TYPO3\CMS\Extbase\Persistence\Generic\Storage\Typo3DbQueryParser::class);
