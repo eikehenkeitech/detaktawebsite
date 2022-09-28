@@ -19,7 +19,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
     {category.description}
   </div>
   <div class="images-with-rounded-corners padding-top-10">
-    <img src="{category.image}">
+    <img src="/{category.image}">
   </div>
   <f:if condition="{category.articles}">
     <div class=" padding-top-20">
@@ -69,7 +69,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
                     <td class="w-50">{article.description}</td>
                     <f:if condition="{category.hasdatasheet}">
                       <f:then>
-                        <td class="w-15 align-center"><a target="_blank"  href="{article.datasheet}" title="Leitet Herunterladen der Datei ein"><img src="fileadmin/datenblaetter/PDF_download_h35.png" title="PDF download" style="" alt="" width="30" height="30"></a></td>
+                        <td class="w-15 align-center"><a target="_blank"  href="/{article.datasheet}" title="Leitet Herunterladen der Datei ein"><img src="/fileadmin/datenblaetter/PDF_download_h35.png" title="PDF download" style="" alt="" width="30" height="30"></a></td>
                       </f:then>
                     </f:if>
 

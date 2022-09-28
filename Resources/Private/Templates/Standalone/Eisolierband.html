@@ -15,7 +15,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
 
 <f:section name="main">
   <div class="images-with-rounded-corners padding-top-10">
-    <img src="{category.image}">
+    <img src="/{category.image}">
   </div>
 
   <h3  >{category.headline}</h3>
@@ -49,7 +49,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
               <f:then>
                 <f:if condition="{article.datasheet}">
                   <f:then>
-                <td class="align-center"><a target="_blank" href="{article.datasheet}" title="Leitet Herunterladen der Datei ein"><img src="fileadmin/datenblaetter/PDF_download_h35.png" title="PDF download" style="" alt="" width="30" height="30"></a></td>
+                <td class="align-center"><a target="_blank" href="/{article.datasheet}" title="Leitet Herunterladen der Datei ein"><img src="/fileadmin/datenblaetter/PDF_download_h35.png" title="PDF download" style="" alt="" width="30" height="30"></a></td>
                   </f:then>
                   <f:else>
                     <td></td>
@@ -106,7 +106,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
               <f:for each="{subCollector}" as="mobilearticles">
                 <f:if condition="{mobilearticles.datasheet}">
                   <f:then>
-                    <td ><a  target="_blank"  href="{mobilearticles.datasheet}" title="Leitet Herunterladen der Datei ein"><img src="fileadmin/datenblaetter/PDF_download_h35.png" title="PDF download" style="" alt="" width="30" height="30"></a></td>
+                    <td ><a  target="_blank"  href="/{mobilearticles.datasheet}" title="Leitet Herunterladen der Datei ein"><img src="/fileadmin/datenblaetter/PDF_download_h35.png" title="PDF download" style="" alt="" width="30" height="30"></a></td>
                   </f:then>
                   <f:else>
                     <td></td>

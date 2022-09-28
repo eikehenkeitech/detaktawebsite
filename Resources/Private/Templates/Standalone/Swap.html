@@ -36,7 +36,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
                 <f:if condition="{category.hasdatasheet}">
                   <f:then>
                     <td colspan="6" class="detakta-article-name {article.addclass}">{article.name}</td>
-                    <td class="align-right"><a target="_blank"  href="{article.datasheet}" title="Leitet Herunterladen der Datei ein"><img src="fileadmin/datenblaetter/PDF_download_h35.png" title="PDF download" style="" alt="" width="30" height="30"></a></td>
+                    <td class="align-right"><a target="_blank"  href="/{article.datasheet}" title="Leitet Herunterladen der Datei ein"><img src="/fileadmin/datenblaetter/PDF_download_h35.png" title="PDF download" style="" alt="" width="30" height="30"></a></td>
                   </f:then>
                   <f:else>
                     <td colspan="7" class="detakta-article-name {article.addclass}">{article.name}</td>
@@ -68,7 +68,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
                           <td>{article.annex}</td>
                           <td><f:format.raw>{article.temperature}</f:format.raw></td>
                           <td><f:format.nl2br>{article.dimension}</f:format.nl2br></td>
-                          <td class="images-with-rounded-corners pull-right"><img src="{article.image}"></td>
+                          <td class="images-with-rounded-corners pull-right"><img src="/{article.image}"></td>
                         </tr>
                       </f:then>
                       <f:else>
@@ -77,10 +77,10 @@ Otherwise your changes will be overwritten the next time you save the extension 
                           <td ><f:format.raw>{article.annex}</f:format.raw></td>
                           <td>{article.description}</td>
                           <td><f:format.raw>{article.dimension}</f:format.raw></td>
-                          <td class="images-with-rounded-corners"><img src="{article.image}"></td>
+                          <td class="images-with-rounded-corners"><img src="/{article.image}"></td>
                           <f:if condition="{category.hasdatasheet}">
                             <f:then>
-                              <td class="align-center"><a target="_blank"  href="{article.datasheet}" title="Leitet Herunterladen der Datei ein"><img src="fileadmin/datenblaetter/PDF_download_h35.png" title="PDF download" style="" alt="" width="30" height="30"></a></td>
+                              <td class="align-center"><a target="_blank"  href="/{article.datasheet}" title="Leitet Herunterladen der Datei ein"><img src="/fileadmin/datenblaetter/PDF_download_h35.png" title="PDF download" style="" alt="" width="30" height="30"></a></td>
                             </f:then>
                             <f:else>
                               <td></td>
@@ -195,7 +195,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
                   </td>
                   <f:for each="{colsPerGroup}" as="mobilearticles">
                     <td class="images-with-rounded-corners">
-                      <img src="{mobilearticles.image}">
+                      <img src="/{mobilearticles.image}">
                     </td>
                   </f:for>
                 </tr>
@@ -210,9 +210,9 @@ Otherwise your changes will be overwritten the next time you save the extension 
                         <f:translate id="category.datenblatt"/>
                       </td>
                       <f:for each="{colsPerGroup}" as="mobilearticles">
-                        <td><a target="_blank"  href="{article.datasheet}"
+                        <td><a target="_blank"  href="/{article.datasheet}"
                                title="Leitet Herunterladen der Datei ein"><img
-                                src="fileadmin/datenblaetter/PDF_download_h35.png"
+                                src="/fileadmin/datenblaetter/PDF_download_h35.png"
                                 title="PDF download" style="" alt="" width="30" height="30"></a>
                         </td>
                       </f:for>
@@ -263,9 +263,9 @@ Otherwise your changes will be overwritten the next time you save the extension 
                                     {mobilearticles.name}
                                   </td>
 
-                                    <td class="{mobilearticles.addclass}"><a target="_blank"  href="{article.datasheet}"
+                                    <td class="{mobilearticles.addclass}"><a target="_blank"  href="/{article.datasheet}"
                                            title="Leitet Herunterladen der Datei ein"><img
-                                            src="fileadmin/datenblaetter/PDF_download_h35.png"
+                                            src="/fileadmin/datenblaetter/PDF_download_h35.png"
                                             title="PDF download" style="" alt="" width="30" height="30"></a>
                                     </td>
 
@@ -396,7 +396,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
                                   </td>
                                   <f:for each="{colsPerGroup}" as="mobilearticles">
                                     <td class="images-with-rounded-corners">
-                                      <img src="{mobilearticles.image}">
+                                      <img src="/{mobilearticles.image}">
                                     </td>
                                   </f:for>
                                 </tr>
@@ -411,9 +411,9 @@ Otherwise your changes will be overwritten the next time you save the extension 
                                         <f:translate id="category.datenblatt"/>
                                       </td>
                                       <f:for each="{colsPerGroup}" as="mobilearticles">
-                                        <td><a target="_blank"  href="{article.datasheet}"
+                                        <td><a target="_blank"  href="/{article.datasheet}"
                                                title="Leitet Herunterladen der Datei ein"><img
-                                                src="fileadmin/datenblaetter/PDF_download_h35.png"
+                                                src="/fileadmin/datenblaetter/PDF_download_h35.png"
                                                 title="PDF download" style="" alt="" width="30" height="30"></a>
                                         </td>
                                       </f:for>

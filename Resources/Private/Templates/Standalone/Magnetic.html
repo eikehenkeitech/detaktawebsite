@@ -18,7 +18,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
   <f:if condition="{category.hasdatasheet}">
     <f:then>
       <div class="">
-        <div class="cell"><f:translate id="category.datenblatt" />&nbsp;<a href="fileadmin/datenblaetter/neticConetic/Mumetal.pdf" title="Leitet Herunterladen der Datei ein" target="_blank" class="download ml-2"><img src="fileadmin/datenblaetter/PDF_download_h35.png" title="PDF download" class="download-pdf-image"></a></div>
+        <div class="cell"><f:translate id="category.datenblatt" />&nbsp;<a href="/fileadmin/datenblaetter/neticConetic/Mumetal.pdf" title="Leitet Herunterladen der Datei ein" target="_blank" class="download ml-2"><img src="/fileadmin/datenblaetter/PDF_download_h35.png" title="PDF download" class="download-pdf-image"></a></div>
 
       </div>
     </f:then>
@@ -208,7 +208,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
                     <tr>
                       <td class="rowheader headercolumn"><f:translate id="category.datenblatt" /></td>
                       <f:for each="{colsPerGroup}" as="mobilearticles">
-                        <td><a target="_blank"  href="{article.datasheet}" title="Leitet Herunterladen der Datei ein"><img src="fileadmin/datenblaetter/PDF_download_h35.png" title="PDF download" style="" alt="" width="30" height="30"></a></td>
+                        <td><a target="_blank"  href="/{article.datasheet}" title="Leitet Herunterladen der Datei ein"><img src="/fileadmin/datenblaetter/PDF_download_h35.png" title="PDF download" style="" alt="" width="30" height="30"></a></td>
                       </f:for>
                     </tr>
                     <f:comment>
@@ -241,7 +241,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
                         <f:if condition="{category.hasdatasheet}">
                           <f:then>
                             <td  colspan="<v:math.sum a="{colsWithLabel}" b="-1" />" class="{mobilearticles.addclass}">{mobilearticles.name}</td>
-                            <td><a target="_blank"  href="{mobilearticles.datasheet}" title="Leitet Herunterladen der Datei ein"><img src="fileadmin/datenblaetter/PDF_download_h35.png" title="PDF download" style="" alt="" width="30" height="30"></a></td>
+                            <td><a target="_blank"  href="/{mobilearticles.datasheet}" title="Leitet Herunterladen der Datei ein"><img src="/fileadmin/datenblaetter/PDF_download_h35.png" title="PDF download" style="" alt="" width="30" height="30"></a></td>
                           </f:then>
                           <f:else>
                             <td  colspan="{colsWithLabel}" class="{mobilearticles.addclass}">{mobilearticles.name}</td>
@@ -330,7 +330,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
                                 <tr>
                                   <td class="rowheader headercolumn"><f:translate id="category.datenblatt" /></td>
                                   <f:for each="{colsPerGroup}" as="mobilearticles">
-                                    <td><a target="_blank"  href="{article.datasheet}" title="Leitet Herunterladen der Datei ein"><img src="fileadmin/datenblaetter/PDF_download_h35.png" title="PDF download" style="" alt="" width="30" height="30"></a></td>
+                                    <td><a target="_blank"  href="/{article.datasheet}" title="Leitet Herunterladen der Datei ein"><img src="/fileadmin/datenblaetter/PDF_download_h35.png" title="PDF download" style="" alt="" width="30" height="30"></a></td>
                                   </f:for>
                                 </tr>
                                 <f:comment>

@@ -22,7 +22,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
     <f:if condition="{category.hasdatasheet}">
       <f:then>
         <div class="pull-right padding-12-important">
-          <a href="/helper/collectPDF.php?cat[0]={category.nameforplugin}" target="_blank" class="detakta-link"><f:translate id="category.alledatenblaetter" /> <img src="fileadmin/datenblaetter/PDF_download_h35.png" title="PDF download" style="" alt="" width="30" height="30"></a>
+          <a href="/helper/collectPDF.php?cat[0]={category.nameforplugin}" target="_blank" class="detakta-link"><f:translate id="category.alledatenblaetter" /> <img src="/fileadmin/datenblaetter/PDF_download_h35.png" title="PDF download" style="" alt="" width="30" height="30"></a>
         </div>
 
       </f:then>
@@ -64,7 +64,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
                 <f:then>
 		<f:if condition="{article.datasheet}">
                     <f:then>
-                    <td class="align-center schs-datenblatt-ds"><a target="_blank" href="{article.datasheet}" title="Leitet Herunterladen der Datei ein"><img src="fileadmin/datenblaetter/PDF_download_h35.png" title="PDF download" style="" alt="" width="30" height="30"></a></td>
+                    <td class="align-center schs-datenblatt-ds"><a target="_blank" href="/{article.datasheet}" title="Leitet Herunterladen der Datei ein"><img src="/fileadmin/datenblaetter/PDF_download_h35.png" title="PDF download" style="" alt="" width="30" height="30"></a></td>
                     </f:then>
                     <f:else>
                       <td class="schs-datenblatt" style="height: 40px !important;">&nbsp;</td>
@@ -80,10 +80,10 @@ Otherwise your changes will be overwritten the next time you save the extension 
                 <tr>
                   <td colspan="2" class="detakta-article-name{article.separatline}">{article.name}</td>
                   <td colspan="4"><f:format.nl2br><f:format.raw>{article.remark}</f:format.raw></f:format.nl2br></td>
-                  <td colspan="2"  class="images-with-rounded-corners"><img  src="{article.image}"></td>
+                  <td colspan="2"  class="images-with-rounded-corners"><img  src="/{article.image}"></td>
                   <f:if condition="{category.hasdatasheet}">
                     <f:then>
-                      <td class="align-center"><a  target="_blank" href="{article.datasheet}" title="Leitet Herunterladen der Datei ein"><img src="fileadmin/datenblaetter/PDF_download_h35.png" title="PDF download" style="" alt="" width="30" height="30"></a></td>
+                      <td class="align-center"><a  target="_blank" href="/{article.datasheet}" title="Leitet Herunterladen der Datei ein"><img src="/fileadmin/datenblaetter/PDF_download_h35.png" title="PDF download" style="" alt="" width="30" height="30"></a></td>
                     </f:then>
                     <f:else>
                       <td ></td>
@@ -129,15 +129,15 @@ Otherwise your changes will be overwritten the next time you save the extension 
                                 <f:if condition="{article.image}">
                                   <f:then>
                                     <div class="align-right">
-                                      <img  src="{article.image}">
+                                      <img  src="/{article.image}">
                                       <f:if condition="{article.dimension}!=''">
                                         <f:then>
-                                          <img  src="{article.dimension}">
+                                          <img  src="/{article.dimension}">
                                         </f:then>
                                       </f:if>
                                       <f:if condition="{article.standards}!=''">
                                         <f:then>
-                                          <img  src="{article.standards}">
+                                          <img  src="/{article.standards}">
                                         </f:then>
                                       </f:if>
                                   </div>
@@ -150,15 +150,15 @@ Otherwise your changes will be overwritten the next time you save the extension 
                                 <f:if condition="{article.image}">
                                   <f:then>
                                     <div class="align-right">
-                                    <img  src="{article.image}">
+                                    <img  src="/{article.image}">
                                       <f:if condition="{article.dimension}!=''">
                                         <f:then>
-                                          <img  src="{article.dimension}">
+                                          <img  src="/{article.dimension}">
                                         </f:then>
                                       </f:if>
                                       <f:if condition="{article.standards}!=''">
                                         <f:then>
-                                          <img  src="{article.standards}">
+                                          <img  src="/{article.standards}">
                                         </f:then>
                                       </f:if>
                                     </div>
@@ -189,9 +189,9 @@ Otherwise your changes will be overwritten the next time you save the extension 
                                     <f:if condition="{article.image}">
                                       <f:then>
                                         <div class="align-right">
-                                          <img  src="{article.image}">
-                                          <img  src="{article.dimension}">
-                                          <img  src="{article.standards}">
+                                          <img  src="/{article.image}">
+                                          <img  src="/{article.dimension}">
+                                          <img  src="/{article.standards}">
                                         </div>
                                       </f:then>
                                     </f:if>
@@ -202,9 +202,9 @@ Otherwise your changes will be overwritten the next time you save the extension 
                                     <f:if condition="{article.image}">
                                       <f:then>
                                         <div class="align-right">
-                                          <img  src="{article.image}">
-                                          <img  src="{article.dimension}">
-                                          <img  src="{article.standards}">
+                                          <img  src="/{article.image}">
+                                          <img  src="/{article.dimension}">
+                                          <img  src="/{article.standards}">
                                         </div>
                                       </f:then>
                                     </f:if>
@@ -363,7 +363,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
                     <tr>
                       <td class="rowheader headercolumn"><f:translate id="category.datenblatt" /></td>
                       <f:for each="{colsPerGroup}" as="mobilearticles">
-                        <td><a target="_blank"  href="{mobilearticles.datasheet}" title="Leitet Herunterladen der Datei ein"><img src="fileadmin/datenblaetter/PDF_download_h35.png" title="PDF download" style="" alt="" width="30" height="30"></a></td>
+                        <td><a target="_blank"  href="/{mobilearticles.datasheet}" title="Leitet Herunterladen der Datei ein"><img src="/fileadmin/datenblaetter/PDF_download_h35.png" title="PDF download" style="" alt="" width="30" height="30"></a></td>
                       </f:for>
                     </tr>
                     <f:comment>
@@ -407,12 +407,12 @@ Otherwise your changes will be overwritten the next time you save the extension 
                         <td colspan="{colsWithLabel}" ><f:format.raw>{mobilearticles.remark}</f:format.raw></td>
                         </tr> 
                         <tr>
-                        <td colspan="{colsWithLabel}" class="images-with-rounded-corners" ><img src="{mobilearticles.image}"></td>
+                        <td colspan="{colsWithLabel}" class="images-with-rounded-corners" ><img src="/{mobilearticles.image}"></td>
                         </tr>
                         <f:if condition="{category.hasdatasheet}">
                           <f:then>
                             <td><f:translate id="category.datenblatt" /></td>
-                            <td  colspan="<v:math.sum a="{colsWithLabel}" b="-1" />"><a target="_blank"  href="{mobilearticles.datasheet}" title="Leitet Herunterladen der Datei ein"><img src="fileadmin/datenblaetter/PDF_download_h35.png" title="PDF download" style="" alt="" width="30" height="30"></a></td>
+                            <td  colspan="<v:math.sum a="{colsWithLabel}" b="-1" />"><a target="_blank"  href="/{mobilearticles.datasheet}" title="Leitet Herunterladen der Datei ein"><img src="/fileadmin/datenblaetter/PDF_download_h35.png" title="PDF download" style="" alt="" width="30" height="30"></a></td>
                           </f:then>
                         </f:if>
                       </f:for>
@@ -490,9 +490,9 @@ Otherwise your changes will be overwritten the next time you save the extension 
                                   <tr>
                                     <td colspan="{colsWithLabel}" class="{mobilearticles.addclass} images-with-rounded-corners">
                                       <div class="align-left">
-                                        <img  src="{mobilearticles.image}">
-                                        <img  src="{mobilearticles.dimension}">
-                                        <img  src="{mobilearticles.standards}">
+                                        <img  src="/{mobilearticles.image}">
+                                        <img  src="/{mobilearticles.dimension}">
+                                        <img  src="/{mobilearticles.standards}">
                                       </div>
 
                                     </td>

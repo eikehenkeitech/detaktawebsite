@@ -23,7 +23,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
         <f:if condition="{category.hasdatasheet}">
             <f:then>
                 <div class="pull-right padding-12-important">
-                    <a href="/helper/collectPDF.php?cat[0]={category.nameforplugin}&cat[1]=swap&cat[2]=wipes&cat[3]=techsprayweitere" target="_blank" class="detakta-link"><f:translate id="category.alledatenblaetter" /> <img src="fileadmin/datenblaetter/PDF_download_h35.png" title="PDF download" style="" alt="" width="30" height="30"></a>
+                    <a href="/helper/collectPDF.php?cat[0]={category.nameforplugin}&cat[1]=swap&cat[2]=wipes&cat[3]=techsprayweitere" target="_blank" class="detakta-link"><f:translate id="category.alledatenblaetter" /> <img src="/fileadmin/datenblaetter/PDF_download_h35.png" title="PDF download" style="" alt="" width="30" height="30"></a>
                 </div>
 
             </f:then>
@@ -153,12 +153,12 @@ Otherwise your changes will be overwritten the next time you save the extension 
                                                             <f:format.raw>{article.dimension}</f:format.raw>
                                                         </td>
                                                         <td class="w-15 images-with-rounded-corners"><img
-                                                                src="{article.image}"></td>
+                                                                src="/{article.image}"></td>
                                                         <f:if condition="{category.hasdatasheet}">
                                                             <f:then>
-                                                                <td class="w-10 align-center"><a target="_blank"  href="{article.datasheet}"
+                                                                <td class="w-10 align-center"><a target="_blank"  href="/{article.datasheet}"
                                                                                             title="Leitet Herunterladen der Datei ein"><img
-                                                                        src="fileadmin/datenblaetter/PDF_download_h35.png"
+                                                                        src="/fileadmin/datenblaetter/PDF_download_h35.png"
                                                                         title="PDF download" style="" alt="" width="30"
                                                                         height="30"></a></td>
                                                             </f:then>
@@ -279,7 +279,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
                                     </td>
                                     <f:for each="{colsPerGroup}" as="mobilearticles">
                                         <td class="images-with-rounded-corners">
-                                            <img src="{mobilearticles.image}">
+                                            <img src="/{mobilearticles.image}">
                                         </td>
                                     </f:for>
                                 </tr>
@@ -294,9 +294,9 @@ Otherwise your changes will be overwritten the next time you save the extension 
                                                 <f:translate id="category.datenblatt"/>
                                             </td>
                                             <f:for each="{colsPerGroup}" as="mobilearticles">
-                                                <td><a target="_blank"  href="{article.datasheet}"
+                                                <td><a target="_blank"  href="/{article.datasheet}"
                                                        title="Leitet Herunterladen der Datei ein"><img
-                                                        src="fileadmin/datenblaetter/PDF_download_h35.png"
+                                                        src="/fileadmin/datenblaetter/PDF_download_h35.png"
                                                         title="PDF download" style="" alt="" width="30" height="30"></a>
                                                 </td>
                                             </f:for>
