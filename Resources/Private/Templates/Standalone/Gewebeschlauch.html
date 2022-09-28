@@ -22,7 +22,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
     <f:if condition="{category.hasdatasheet}">
       <f:then>
         <div class="pull-right padding-12-important">
-          <a href="/helper/collectPDF.php?cat[0]={category.nameforplugin}" target="_blank" class="detakta-link"><f:translate id="category.alledatenblaetter" /> <img src="fileadmin/datenblaetter/PDF_download_h35.png" title="PDF download" style="" alt="" width="30" height="30"></a>
+          <a href="/helper/collectPDF.php?cat[0]={category.nameforplugin}" target="_blank" class="detakta-link"><f:translate id="category.alledatenblaetter" /> <img src="/fileadmin/datenblaetter/PDF_download_h35.png" title="PDF download" style="" alt="" width="30" height="30"></a>
         </div>
 
       </f:then>
@@ -67,7 +67,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
             <td>{article.remark}</td>
             <f:if condition="{category.hasdatasheet}">
               <f:then>
-                <td class="align-center"><a  target="_blank"  href="{article.datasheet}" title="Leitet Herunterladen der Datei ein"><img src="fileadmin/datenblaetter/PDF_download_h35.png" title="PDF download" style="" alt="" width="30" height="30"></a></td>
+                <td class="align-center"><a  target="_blank"  href="/{article.datasheet}" title="Leitet Herunterladen der Datei ein"><img src="/fileadmin/datenblaetter/PDF_download_h35.png" title="PDF download" style="" alt="" width="30" height="30"></a></td>
               </f:then>
             </f:if>
 
@@ -212,7 +212,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
               <f:for each="{subCollector}" as="mobilearticles">
                 <f:if condition="{mobilearticles.part}!='1'">
                   <f:then>
-                    <td ><a  target="_blank"  href="{mobilearticles.datasheet}" title="Leitet Herunterladen der Datei ein"><img src="fileadmin/datenblaetter/PDF_download_h35.png" title="PDF download" style="" alt="" width="30" height="30"></a></td>
+                    <td ><a  target="_blank"  href="/{mobilearticles.datasheet}" title="Leitet Herunterladen der Datei ein"><img src="/fileadmin/datenblaetter/PDF_download_h35.png" title="PDF download" style="" alt="" width="30" height="30"></a></td>
                   </f:then>
                 </f:if>
 
